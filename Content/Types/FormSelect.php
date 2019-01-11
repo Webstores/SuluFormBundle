@@ -105,7 +105,7 @@ class FormSelect extends SimpleContentType
 
         $locale = $property->getStructure()->getLanguageCode();
 
-        $formEntity = $this->formRepository->findById($id, $locale);
+        $formEntity = $this->formRepository->loadById($id, $locale);
 
         if (!$formEntity) {
             return [];
